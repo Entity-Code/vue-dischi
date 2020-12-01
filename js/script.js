@@ -8,30 +8,15 @@ var app = new Vue({
    data: {
 
       albums: []
-
+      
    },
    mounted: function(index) {
-
-      // for (let i = 0; i < 10; i++) {
-      //    this.album.push("");
-      // }
 
       axios.get("https://flynn.boolean.careers/exercises/api/array/music")
       .then(risposta => {
 
-         let response = risposta.data.response;
-
-
-         for (var i = 0; i < response.length; i++) {
-
-            this.albums.push(response[i].title + response[i].author + response[i].year)
-
-         }
-
-
-
-
-
+         this.albums = risposta.data.response;
+         console.log(this.albums);
 
       });
    }
