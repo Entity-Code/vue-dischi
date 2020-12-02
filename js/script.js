@@ -29,6 +29,6 @@ var app = new Vue({
                return album.genre === this.genreSelected;
             }
          });
-      }   
+      }
    }
 });
