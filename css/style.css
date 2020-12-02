@@ -68,14 +68,17 @@ p{
 }
 
 .custom-select {
-   background-color: #0563af;
+   background-color: #4f6e80;
    color: white;
-   padding: 12px;
+   padding: 8px;
    width: 250px;
    border: none;
    font-size: 20px;
-   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+   box-shadow: 0 5px 25px #4f6e80;
    -webkit-appearance: button;
    appearance: button;
    outline: none;
+   position: absolute;
+   top: 20px;
+   right: 10px;
 }
