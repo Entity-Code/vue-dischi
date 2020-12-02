@@ -7,8 +7,8 @@ var app = new Vue({
    el: "#app",
    data: {
 
-      albums: []
-      
+      albums: [],
+      genreSelected: ""
    },
    mounted: function(index) {
 
@@ -19,5 +19,16 @@ var app = new Vue({
          console.log(this.albums);
 
       });
+   },
+   computed: {
+      genreFilter: function () {
+         return this.albums.filter((album) => {
+            if (this.genreSelected === "" || this.genreSelected === "Tutti") {
+               return this.albums;
+            } else {
+               return album.genre === this.genreSelected;
+            }
+         });
+      }   
    }
 });
